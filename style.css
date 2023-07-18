@@ -1,0 +1,70 @@
+@keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1522;
+  }
+  
+  .heart {
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: rotate(-45deg) scale(1);
+    }
+    50% {
+      transform: rotate(-45deg) scale(1.2);
+    }
+    100% {
+      transform: rotate(-45deg) scale(1);
+    }
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+  }
+  
+  .heart:before {
+    top: -50%;
+  }
+  
+  .heart:after {
+    right: -50%;
+  }
+  
+  .text {
+    z-index: 56;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: antiquewhite;
+  }
